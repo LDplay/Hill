@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-сайт для спортивного подіуму</title>
+</head>
+
+<body align="center">
+    <div class="main">
+
+        <h1>Спортивний Подіум</h1>
+
+        <table border="1">
+            <tr>
+                <th>Дисципліна</th>
+                <th>Результат</th>
+            </tr>
+            <tr>
+                <td>Біг</td>
+                <td>10 секунд</td>
+            </tr>
+            <tr>
+                <td>Стрибок у висоту</td>
+                <td>2 метри</td>
+            </tr>
+        </table>
+
+        <img src="depositphotos_188650812-stock-photo-winner-podium-sports-symbols-sport.jpg" alt="Спортивний подіум">
+
+        <button onclick="displayDateTime()">Показати поточний час</button>
+        <a href="index1.html">Перейти до другої сторінки</a>
+        <p id="userInfo"></p>
+
+        <script>
+            window.onload = function () {
+                alert("Ласкаво просимо на наш сайт!");
+
+                var name = prompt("Введіть ваше ім'я:");
+                var group = prompt("Введіть вашу групу:");
+
+                var userInfo = document.getElementById("userInfo");
+                userInfo.innerHTML = "Прізвище та ім'я студента: " + name + "<br>Група: " + group;
+            };
+
+            function displayDateTime() {
+                var currentDate = new Date();
+                alert("Поточний час: " + currentDate.toLocaleTimeString());
+            }
+        </script>
+    </div>
+</body>
+
+</html>
